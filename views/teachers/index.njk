@@ -1,0 +1,53 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+  <div class="card">
+    {# <section class="avatar" style="background: url({{instructor.avatar_url}}) no-repeat center center / cover"></section> #}
+    <section class="avatar" style="background: url(https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80) no-repeat center center / cover"></section>
+    <section class="informacoes">
+      <h3>Professor</h3>
+      <div class="item">
+        <div class="titulo">Url do Avatar</div>
+        <div>
+          <input type="url" name="avatar_url" placeholder="https://" value="">
+        </div>
+      </div>
+      <div class="item">
+        <div class="titulo">Nome do professor</div>
+        <div>
+          <input type="text" name="nome" placeholder="Digite o nome completo" value="Jose">
+        </div>
+      </div>
+      <div class="item">
+        <div class="titulo">Idade</div>
+        <div>
+          <input type="number" name="idade" placeholder="Idade" value="1">
+        </div>
+      </div>
+      <div class="item">
+        <div class="titulo">Grau de escolaridade</div>
+        <div>
+          <input type="text" name="escolaridade" placeholder="" value="Doutorado">
+        </div>
+      </div>
+      <div class="item">
+        <div class="titulo">Tipo de aula</div>
+        <div>
+          <input type="text" name="tipo_aula" placeholder="" value="Presencial">
+        </div>
+      </div>
+      <div class="item">
+        <div class="titulo">Acompanhamento</div>
+        <div>
+          <input type="text" name="acompanhamento" placeholder="Separe os tipos de acompanhamento por virgula" value="">
+        </div>
+      </div>
+      <div class="item">
+        <div class="titulo">Desde</div>
+        <div>
+          <input type="text" name="name" placeholder="" value="20/10/2020">
+        </div>
+      </div>
+    </section>
+  </div>
+{% endblock content %}

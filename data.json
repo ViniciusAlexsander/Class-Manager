@@ -1,0 +1,68 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "avatar_url": "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
+      "nome": "Vinicius Alexsander Lima Marinho",
+      "nascimento": 969840000000,
+      "escolaridade": "Médio Completo",
+      "tipoAula": "Presencial",
+      "services": [
+        "Matemática "
+      ],
+      "created_at": 1587927217976
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
+      "nome": "Alzira do Carmo Lima Marinho",
+      "nascimento": -51408000000,
+      "escolaridade": "Médio Completo",
+      "tipoAula": "Presencial",
+      "services": [
+        "Matemática",
+        " Português "
+      ],
+      "created_at": 1587927262041
+    },
+    {
+      "id": 3,
+      "avatar_url": "https://pbs.twimg.com/profile_images/942546004112494592/vhdtDbHy_400x400.jpg",
+      "nome": "Vinicius Alexsander Lima Marinho",
+      "nascimento": 1600992000000,
+      "escolaridade": "Médio Completo",
+      "tipoAula": "Presencial",
+      "services": [
+        "Matemática",
+        " Português "
+      ],
+      "created_at": 1587928415772
+    },
+    {
+      "id": 4,
+      "avatar_url": "https://pbs.twimg.com/profile_images/942546004112494592/vhdtDbHy_400x400.jpg",
+      "nome": "Vinicius Alexsander Lima Marinho",
+      "nascimento": 811987200000,
+      "escolaridade": "Médio Completo",
+      "tipoAula": "Distancia",
+      "services": [
+        "Matemática",
+        " Português "
+      ],
+      "created_at": 1587928455050
+    },
+    {
+      "id": 5,
+      "avatar_url": "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
+      "nome": "Viniciu",
+      "nascimento": 969840000000,
+      "escolaridade": "Mestrado",
+      "tipoAula": "Presencial",
+      "services": [
+        "Matemática",
+        " inglês"
+      ],
+      "created_at": 1587929405842
+    }
+  ]
+}
