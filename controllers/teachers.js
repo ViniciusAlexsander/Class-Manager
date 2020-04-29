@@ -4,7 +4,7 @@ const { age, date } = require("../utils");
 
 //index
 exports.index = function (req, res) {
-  return res.render("teachers/index");
+  return res.render("teachers/index", { teachers: data.teachers });
 };
 
 //create mostrar pagina
@@ -28,13 +28,13 @@ exports.post = function (req, res) {
     nascimento,
     escolaridade,
     tipoAula,
-    atuacao,
+    services,
   } = req.body;
 
-  const services = atuacao.split(",");
+  services = services.split(",");
   nascimento = Date.parse(nascimento);
   const created_at = Date.now();
-  const id = Number(data.teachers.length + 1);
+  const id = Number(data.teachers[data.teachers.length - 1].id + 1);
 
   data.teachers.push({
     id,
@@ -79,11 +79,61 @@ exports.edit = function (req, res) {
     return id == teacher.id;
   });
 
-  if (!foundTeacher) return res.send("Não foi encontrado nenhum professor");
+  if (!foundTeacher) return res.send(" Não foi encontrado nenhum professor");
+
   const teacher = {
     ...foundTeacher,
     nascimento: date(foundTeacher.nascimento).iso,
   };
 
   return res.render("teachers/edit", { teacher });
+};
+
+//rota q realmente irá editar td
+exports.put = function (req, res) {
+  const { id } = req.body;
+
+  let foundTeacher;
+
+  for (let i = 0; i < data.teachers.length; i++) {
+    if (data.teachers[i].id == id) {
+      foundTeacher = data.teachers[i];
+    }
+  }
+
+  const teacher = {
+    ...foundTeacher,
+    ...req.body,
+    nascimento: Date.parse(req.body.nascimento),
+    id: Number(id),
+    services: req.body.services.split(","),
+  };
+
+  for (let i = 0; i < data.teachers.length; i++) {
+    if (data.teachers[i].id == id) {
+      data.teachers[i] = teacher;
+    }
+  }
+
+  fs.writeFile("data.json", JSON.stringify(data, null, 2), function (err) {
+    if (err) return res.send("write error");
+
+    return res.redirect(`/teachers/${id}`);
+  });
+};
+
+exports.delete = function (req, res) {
+  const { id } = req.body;
+
+  const filteredTeacher = data.teachers.filter(function (teacher) {
+    return teacher.id != id;
+  });
+
+  data.teachers = filteredTeacher;
+
+  fs.writeFile("data.json", JSON.stringify(data, null, 2), function (err) {
+    if (err) return res.send("write file error");
+
+    return res.redirect("/teachers");
+  });
 };

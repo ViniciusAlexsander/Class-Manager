@@ -1,11 +1,11 @@
 {% extends "layout.njk" %}
 
 {% block content %}
-  <form class="card" method="POST" action="/teachers">
+  <form class="card" method="POST" action="/students">
     <section class="avatar" style="background: url(https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60) no-repeat center center / cover"></section>
     <section class="informacoes">
-      <h3>Professor</h3>
-      {% include 'teachers/fields.njk'%}
+      <h3>Estudantes</h3>
+      {% include 'students/fields.njk'%}
     </section>
   </form>
 
