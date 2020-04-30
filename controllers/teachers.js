@@ -31,10 +31,17 @@ exports.post = function (req, res) {
     services,
   } = req.body;
 
+  let lastId;
+
+  if (data.teachers[0] == undefined) {
+    lastId = 0;
+  } else {
+    lastId = data.teachers[data.teachers.length - 1].id;
+  }
   services = services.split(",");
   nascimento = Date.parse(nascimento);
   const created_at = Date.now();
-  const id = Number(data.teachers[data.teachers.length - 1].id + 1);
+  const id = Number(lastId + 1);
 
   data.teachers.push({
     id,

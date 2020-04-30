@@ -9,10 +9,19 @@
         {% include 'teachers/fields.njk'%}
         <input type="hidden" name="id" value="{{teacher.id}}">
       </form>
-      <form class="delete" method="POST" action="/teachers?_method=DELETE">
+      <form id="delete" method="POST" action="/teachers?_method=DELETE">
         <input type="hidden" name="id" value="{{teacher.id}}">
         <button type="submit">Deletar</button>
       </form>
     </section>
   </div>
+  <script>
+    const formDelete = document.querySelector("#delete");
+    formDelete.addEventListener("submit", function (event) {
+      const confirmation = confirm("Deseja realmente deletar?");
+      if (!confirmation) {
+        event.preventDefault();
+      }
+    });
+  </script>
 {% endblock content %}

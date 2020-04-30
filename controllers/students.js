@@ -31,9 +31,17 @@ exports.post = function (req, res) {
     cargaHoraria,
   } = req.body;
 
+  let lastId;
+
+  if (data.students[0] == undefined) {
+    lastId = 0;
+  } else {
+    lastId = data.students[data.students.length - 1].id;
+  }
+
   nascimento = Date.parse(nascimento);
   const created_at = Date.now();
-  const id = Number(data.students[data.students.length - 1].id + 1);
+  const id = Number(lastId + 1);
 
   data.students.push({
     id,
