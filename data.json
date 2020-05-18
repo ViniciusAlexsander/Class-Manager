@@ -3,11 +3,11 @@
     {
       "id": 1,
       "avatar_url": "https://pbs.twimg.com/profile_images/942546004112494592/vhdtDbHy_400x400.jpg",
-      "nome": "Vinicius Alexsander Lima Marinho",
-      "nascimento": 969840000000,
-      "escolaridade": "Médio Completo",
-      "tipoAula": "Presencial",
-      "services": [
+      "name": "Vinicius Alexsander Lima Marinho",
+      "birth_date": 969840000000,
+      "education_level": "Médio Completo",
+      "class_type": "Presencial",
+      "subjects_taught": [
         "Apresentador",
         " comentarista",
         " humorista",
@@ -20,11 +20,11 @@
     {
       "id": 1,
       "avatar_url": "https://pbs.twimg.com/profile_images/942546004112494592/vhdtDbHy_400x400.jpg",
-      "nome": "Vinicius Alexsander Lima Marinho",
-      "nascimento": 969840000000,
+      "name": "Vinicius Alexsander Lima Marinho",
+      "birth": 969840000000,
       "email": "viniciusalexsander1@gmail.com",
-      "escolaridade": "3º ano do ensino médio",
-      "cargaHoraria": "68",
+      "schooling": "3º ano do ensino médio",
+      "workload": "68",
       "created_at": 1588258410260
     }
   ]

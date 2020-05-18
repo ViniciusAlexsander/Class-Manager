@@ -7,7 +7,7 @@
 <div class="item">
   <div class="titulo">Nome do Aluno</div>
   <div>
-    <input type="text" name="nome" placeholder="Digite o nome completo" value="{{student.nome}}">
+    <input type="text" name="name" placeholder="Digite o nome completo" value="{{student.name}}">
   </div>
 </div>
 <div class="item">
@@ -19,21 +19,21 @@
 <div class="item">
   <div class="titulo">Data de nascimento</div>
   <div>
-    <input type="date" name="nascimento" placeholder="Idade" value="{{student.nascimento}}">
+    <input type="date" name="birth" placeholder="Idade" value="{{student.birth}}">
   </div>
 </div>
 <div class="item">
   <div class="titulo">Ano escolar</div>
   <div>
-    <select name="escolaridade">
-      <option value="5º ano do ensino fundamental" {% if student.escolaridade =="5º ano do ensino fundamental" %} selected="selected" {%endif%}>5º ano do Ensino Fundamental</option>
-      <option value="6º ano do ensino fundamental" {% if student.escolaridade =="6º ano do ensino fundamental" %} selected="selected" {%endif%}>6º ano do Ensino Fundamental</option>
-      <option value="7º ano do ensino fundamental" {% if student.escolaridade =="7º ano do ensino fundamental" %} selected="selected" {%endif%}>7º ano do Ensino Fundamental</option>
-      <option value="8º ano do ensino fundamental" {% if student.escolaridade =="8º ano do ensino fundamental" %} selected="selected" {%endif%}>8º ano do Ensino Fundamental</option>
-      <option value="9º ano do ensino fundamental" {% if student.escolaridade =="9º ano do ensino fundamental" %} selected="selected" {%endif%}>9º ano do Ensino Fundamental</option>
-      <option value="1º ano do ensino médio" {% if student.escolaridade =="1º ano do ensino médio" %} selected="selected" {%endif%}>1º ano do Ensino Médio</option>
-      <option value="2º ano do ensino médio" {% if student.escolaridade =="2º ano do ensino médio" %} selected="selected" {%endif%}>2º ano do Ensino Médio</option>
-      <option value="3º ano do ensino médio" {% if student.escolaridade =="3º ano do ensino médio" %} selected="selected" {%endif%}>3º ano do Ensino Médio</option>
+    <select name="schooling">
+      <option value="5º ano do ensino fundamental" {% if student.schooling =="5º ano do ensino fundamental" %} selected="selected" {%endif%}>5º ano do Ensino Fundamental</option>
+      <option value="6º ano do ensino fundamental" {% if student.schooling =="6º ano do ensino fundamental" %} selected="selected" {%endif%}>6º ano do Ensino Fundamental</option>
+      <option value="7º ano do ensino fundamental" {% if student.schooling =="7º ano do ensino fundamental" %} selected="selected" {%endif%}>7º ano do Ensino Fundamental</option>
+      <option value="8º ano do ensino fundamental" {% if student.schooling =="8º ano do ensino fundamental" %} selected="selected" {%endif%}>8º ano do Ensino Fundamental</option>
+      <option value="9º ano do ensino fundamental" {% if student.schooling =="9º ano do ensino fundamental" %} selected="selected" {%endif%}>9º ano do Ensino Fundamental</option>
+      <option value="1º ano do ensino médio" {% if student.schooling =="1º ano do ensino médio" %} selected="selected" {%endif%}>1º ano do Ensino Médio</option>
+      <option value="2º ano do ensino médio" {% if student.schooling =="2º ano do ensino médio" %} selected="selected" {%endif%}>2º ano do Ensino Médio</option>
+      <option value="3º ano do ensino médio" {% if student.schooling =="3º ano do ensino médio" %} selected="selected" {%endif%}>3º ano do Ensino Médio</option>
 
     </select>
   </div>
@@ -41,7 +41,7 @@
 <div class="item">
   <div class="titulo">Carga Horária</div>
   <div>
-    <input type="number" name="cargaHoraria" placeholder="Colocar em Horas" value="{{student.cargaHoraria}}">
+    <input type="number" name="workload" placeholder="Colocar em Horas" value="{{student.workload}}">
   </div>
 </div>
 <button type="submit">Salvar</button>

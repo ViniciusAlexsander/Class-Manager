@@ -8,7 +8,7 @@
       <h3>Detalhes</h3>
       <div class="item">
         <div class="titulo">Nome do professor</div>
-        <div>{{teacher.nome}}</div>
+        <div>{{teacher.name}}</div>
       </div>
       <div class="item">
         <div class="titulo">Idade</div>
@@ -16,16 +16,16 @@
       </div>
       <div class="item">
         <div class="titulo">Grau de escolaridade</div>
-        <div>{{teacher.escolaridade}}</div>
+        <div>{{teacher.education_level}}</div>
       </div>
       <div class="item">
         <div class="titulo">Tipo de aula</div>
-        <div>{{teacher.tipoAula}}</div>
+        <div>{{teacher.class_type}}</div>
       </div>
       <div class="item">
         <div class="titulo">Acompanhamentos</div>
         <div>
-          {% for atuacao in teacher.services %}
+          {% for atuacao in teacher.subjects_taught %}
             <span>{{atuacao}}</span>
           {% endfor %}
         </div>

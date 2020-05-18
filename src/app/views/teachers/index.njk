@@ -15,13 +15,11 @@
           <tr>
             <td>
               <span style="background-image: url({{teacher.avatar_url}})"></span>
-              <h4>{{teacher.nome}}</h4>
+              <h4>{{teacher.name}}</h4>
             </td>
 
             <td>
-              {% for atuacao in teacher.services %}
-                <span class="atuacao">{{atuacao}}</span>
-              {% endfor %}
+              <span class="atuacao">{{teacher.subjects_taught}}</span>
             </td>
 
             <td>

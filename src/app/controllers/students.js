@@ -21,14 +21,7 @@ module.exports = {
       }
     }
 
-    let {
-      avatar_url,
-      nome,
-      email,
-      nascimento,
-      escolaridade,
-      cargaHoraria,
-    } = req.body;
+    let { avatar_url, name, email, birth, schooling, workload } = req.body;
 
     let lastId;
 
@@ -38,18 +31,18 @@ module.exports = {
       lastId = data.students[data.students.length - 1].id;
     }
 
-    nascimento = Date.parse(nascimento);
+    birth = Date.parse(birth);
     const created_at = Date.now();
     const id = Number(lastId + 1);
 
     data.students.push({
       id,
       avatar_url,
-      nome,
-      nascimento,
+      name,
+      birth,
       email,
-      escolaridade,
-      cargaHoraria,
+      schooling,
+      workload,
       created_at,
     });
 
@@ -70,8 +63,8 @@ module.exports = {
 
     const student = {
       ...foundStudent,
-      age: age(foundStudent.nascimento),
-      birthday: date(foundStudent.nascimento).birthDay,
+      age: age(foundStudent.birth),
+      birthday: date(foundStudent.birth).birthDay,
       created_at: Intl.DateTimeFormat("pt-BR").format(foundStudent.created_at),
     };
 
@@ -88,7 +81,7 @@ module.exports = {
 
     const student = {
       ...foundStudent,
-      nascimento: date(foundStudent.nascimento).iso,
+      birth: date(foundStudent.birth).iso,
     };
 
     return res.render("students/edit", { student });
@@ -108,7 +101,7 @@ module.exports = {
     const student = {
       ...foundStudent,
       ...req.body,
-      nascimento: Date.parse(req.body.nascimento),
+      birth: Date.parse(req.body.birth),
       id: Number(id),
     };
 
